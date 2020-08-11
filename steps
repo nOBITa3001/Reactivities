@@ -52,8 +52,8 @@ Try run - dn run -p .\API\
 
 
 Add 3rd packages via nuget
-Persistence: Microsoft.EntityFrameworkCore and Microsoft.EntityFrameworkCore.SQLite
-API: Microsoft.EntityFrameworkCore.Design
+  Persistence: Microsoft.EntityFrameworkCore and Microsoft.EntityFrameworkCore.SQLite
+  API: Microsoft.EntityFrameworkCore.Design
 
 
 Update netstandard2.1 in *.csproj
@@ -80,12 +80,17 @@ npm i semantic-ui-react
 dn ef migrations add "ActivityEntityAdded" -p Persistence\ -s API\
 
 
-code snippet at ~\Reactivities\.vscode\reactivities.code-snippets
+copy ~\Reactivities\_dev-assets\reactivities.code-snippets to ~\Reactivities\.vscode\reactivities.code-snippets
 
 
+Add 3rd packages via nuget
+  Application: MediatR.Extensions.Microsoft.DependencyInjection
 
 
+import postman collection from ~\Reactivities\_dev-assets\Reactivities.postman_collection.json
 
+
+copy ~\Reactivities\_dev-assets\handlerSnippets.code-snippets to ~\Reactivities\.vscode\handlerSnippets.code-snippets
 
 
 
