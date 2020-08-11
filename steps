@@ -76,4 +76,17 @@ npm start
 npm i axios
 npm i semantic-ui-react
 
+
+dn ef migrations add "ActivityEntityAdded" -p Persistence\ -s API\
+
+
+code snippet at ~\Reactivities\.vscode\reactivities.code-snippets
+
+
+
+
+
+
+
+
 // TODO:
