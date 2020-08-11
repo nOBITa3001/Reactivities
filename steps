@@ -1,0 +1,50 @@
+Initialize solution
+  alias gs=git status
+  alias dn=dotnet $*
+
+  cd Reactivities
+  dn new sln
+  dn new classlib -n Domain
+  dn new classlib -n Persistence
+  dn new classlib -n Application
+  dn new webapi -n API
+
+  dn sln add Domain\
+  dn sln add Persistence\
+  dn sln add Application\
+  dn sln add API\
+  dn sln list
+
+  cd Application\
+  dn add reference ..\Domain\
+  dn add reference ..\Persistence\
+
+  cd API\
+  dn add reference ..\Application\
+
+  cd Persistence\
+  dn add reference ..\Domain\
+
+
+Set up VS Code - https://gist.github.com/nOBITa3001/836237285f1e1f3449ed2953b61b708e
+  λ code --list-extensions
+  formulahendry.auto-close-tag
+  formulahendry.auto-rename-tag
+  CoenraadS.bracket-pair-coloriz
+  ms-dotnettools.csharp
+  jchannon.csharpextensions
+  dsznajder.es7-react-js-snippet
+  PKief.material-icon-theme
+  jmrog.vscode-nuget-package-man
+  esbenp.prettier-vscode
+  alexcvzz.vscode-sqlite
+  Fudge.auto-using
+  setting > exclude
+    "files.exclude": {
+      "**/*.js.map": true,
+      "**/bin": true,
+      "**/obj": true
+    }
+
+
+Try run - dn run -p .\API\
