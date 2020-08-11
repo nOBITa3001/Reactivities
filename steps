@@ -45,6 +45,27 @@ Set up VS Code - https://gist.github.com/nOBITa3001/836237285f1e1f3449ed2953b61b
       "**/bin": true,
       "**/obj": true
     }
+  Csharpfixformat › Style › Braces: On Same Line
 
 
 Try run - dn run -p .\API\
+
+
+Add 3rd packages via nuget
+Persistence: Microsoft.EntityFrameworkCore and Microsoft.EntityFrameworkCore.SQLite
+API: Microsoft.EntityFrameworkCore.Design
+
+
+Update netstandard2.1 in *.csproj
+
+
+dn tool install --global dotnet-ef OR dotnet tool update --global dotnet-ef
+dn ef migrations add InitialCreate -p Persistence\ -s API\
+dn ef migrations add SeedValues -p Persistence\ -s API\
+
+
+cd API\
+dotnet watch start
+
+
+// TODO:
