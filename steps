@@ -68,4 +68,12 @@ cd API\
 dotnet watch start
 
 
+cd Reactivities
+npx create-react-app client-app --use-npm --typescript
+cd client-app
+npm start
+
+npm i axios
+npm i semantic-ui-react
+
 // TODO:
